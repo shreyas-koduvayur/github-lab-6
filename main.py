@@ -1,4 +1,4 @@
-
+#Shreyas Koduvayur
 def encoded(digit):
     change=""
     for i in digit:
