@@ -5,9 +5,13 @@ def encoded(digit):
         added= (int(i)+3)%10
         change+= str(added)
     return change
-result = encoded("23457839")
-print(result)
 
+def decoder(digits):
+    variable = ""
+    for i in digits:
+        addition_password = (int(i) - 3) % 10
+        variable += str(addition_password)
+    return variable
 
 
 
@@ -24,6 +28,8 @@ def main():
         if choices ==1:
             question = input("Please enter your password to encode:")
             print("Your password has been encoded and stored!")
+        elif choices ==2:
+            print(f"The encoded password is {encoded(question)}, and the original password is {question}")
         elif choices ==3:
             break
 
